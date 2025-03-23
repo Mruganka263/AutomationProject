@@ -1,9 +1,11 @@
 package io.cucumber.stepDefinition;
 
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.core.Context;
 import io.cucumber.core.Manager;
+import io.cucumber.java.en.Given;
+import io.cucumber.util.CommonUtilities;
+
+import java.io.IOException;
 
 public class Navigation extends Context {
 
@@ -12,11 +14,7 @@ public class Navigation extends Context {
     }
 
     @Given("^the page under test is '(.+)'$")
-    public void navToPage(String url) {
-        manager.getDriver().get(url);
-        //stash("exampleKey1", "exampleValue1");
+    public void navToPage(String url) throws IOException {
+        manager.getDriver().get(CommonUtilities.getConfigProperty(url));
     }
-
-
-
 }
