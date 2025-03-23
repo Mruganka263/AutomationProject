@@ -8,11 +8,10 @@ import org.junit.platform.suite.api.IncludeEngines;
 import org.junit.platform.suite.api.SelectPackages;
 import org.junit.platform.suite.api.Suite;
 
-//@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty, html:target/cucumber-report/cucumber.html")
 @Suite
 @IncludeEngines("cucumber")
 @SelectPackages("io.cucumber.features")
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "io.cucumber")
-@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty, html:target/cucumber-report/cucumber.html")
-//@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME,value = "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm")
-public class RunCucumberTest {}
+@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm")
+public class RunCucumberTest {
+}
