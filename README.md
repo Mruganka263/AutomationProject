@@ -3,14 +3,13 @@ This automation project follows the BDD (Behavior-Driven Development) approach, 
 
 📦 Project Root  
  ┣ 📂 src/main/java/io/cucumber/  
- ┃ ┣ 📂 pages            # Contains Page Object classes for the application  
- ┃ ┣ 📂 stepDefinition   # Holds step definition files mapping Gherkin steps to Java methods  
- ┃ ┣ 📂 core            # Contains base classes and core utilities  
- ┃ ┣ 📂 util            # Includes reusable functions across the test suite  
- ┣ 📂 src/test/resources  
- ┃ ┣ 📂 features        # Holds Cucumber feature files (test scenarios written in Gherkin)  
- ┃ ┣ # Contains test data files and application properties  
- ┣ 📂 target            # Stores execution results and reports  
+ ┃ ┣ 📂 pages             # Contains Page Object classes for the application  
+ ┃ ┣ 📂 stepDefinition    # Holds step definition files mapping Gherkin steps to Java methods  
+ ┃ ┣ 📂 core              # Contains base classes and core utilities  
+ ┃ ┣ 📂 util              # Includes reusable functions across the test suite  
+ ┣ 📂 src/test/resources  # Contains test data files and application properties
+ ┃ ┣ 📂 features          # Holds Cucumber feature files (test scenarios written in Gherkin)   
+ ┣ 📂 target              # Stores execution results and reports  
 
 
 ## Run the tests
