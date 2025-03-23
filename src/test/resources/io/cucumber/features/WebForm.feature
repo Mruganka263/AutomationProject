@@ -3,7 +3,7 @@ Feature: The Web Form
 
   @TEST_TI_0001
   Scenario: User is able to Add details in all input fields and Submit the form
-    Given the page under test is 'https://www.selenium.dev/selenium/web/web-form.html'
+    Given the page under test is 'web_form_url'
     When Enter 'User1' text in 'Text input' field
     * Enter 'ABCD' text in 'Password' field
     * Enter 'Address line 1 \n Address Line 2' text in 'Textarea' field

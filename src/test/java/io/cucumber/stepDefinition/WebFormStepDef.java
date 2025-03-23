@@ -18,12 +18,14 @@ import java.util.function.Predicate;
 
 public class WebFormStepDef extends Context {
 
+    WebForm webForm;
+    JavascriptExecutor js;
+
     public WebFormStepDef(Manager manager) {
         super(manager);
+        webForm = new WebForm(manager.getDriver());
+        js = (JavascriptExecutor) manager.getDriver();
     }
-
-    WebForm webForm = new WebForm(manager.getDriver());
-    JavascriptExecutor js = (JavascriptExecutor) manager.getDriver();
 
     @When("Enter {string} text/value in {string} field")
     public void enterTextInTextInputField(String value, String textboxName) {
@@ -105,12 +107,12 @@ public class WebFormStepDef extends Context {
 
     @And("Verify form submitted message is displayed")
     public void verifyFormSubmittedMessageIsDisplayed() {
-        Assert.assertEquals(webForm.getFormSubmitMessage().getText(),"Form submitted");
+        Assert.assertEquals(webForm.getFormSubmitMessage().getText(), "Form submitted");
     }
 
     @And("Pick {string} color")
-    public void pickColor(String colorName){
-        Color color =Color.fromString(colorName);
+    public void pickColor(String colorName) {
+        Color color = Color.fromString(colorName);
         System.out.println(color.toString());
         js.executeScript("arguments[0].value = arguments[1];", webForm.getColorPicker(), color.asHex());
 

@@ -85,7 +85,6 @@ public class WebForm extends Page {
     private WebElement submitButton;
 
 
-
     @FindBy(tagName = "h1")
     private WebElement formSubmitMessage;
 
@@ -104,6 +103,7 @@ public class WebForm extends Page {
     public List<WebElement> getCheckBoxes() {
         return checkBoxes;
     }
+
     public WebElement getFormSubmitMessage() {
         return formSubmitMessage;
     }
@@ -111,7 +111,6 @@ public class WebForm extends Page {
     public List<WebElement> getRadioButtons() {
         return radioButtons;
     }
-
 
     public void enterTextInInputField(String textboxName, String value) {
         switch (textboxName) {
