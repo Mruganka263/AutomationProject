@@ -1,22 +1,26 @@
 # Selenium, Java, and Cucumber with POM
-This automation project follows BDD approach and tests are written in Gherkin(Cucumber) language. It's build on Selenium and Java using Page Object Model(POM) framework. 
-# Folder Structure
+This automation project follows the BDD (Behavior-Driven Development) approach, with test scenarios written in Gherkin (Cucumber) language. It is built using Selenium and Java and follows the Page Object Model (POM) framework for better maintainability and reusability 
 
-- **java/io/cucumber/pages** : This folder will contain the page objects for the application
-- **java/io/cucumber/stepDefinition** : This folder contains step Definition files which are used to write the code for every test step.
-- **java/io/cucumber/core** : This folder contains main base classes.
-- **java/io/cucumber/util** : This folder contain functions which can be used across test suite.
-- **resource** :  This folder contains the test data files and application properties that are require for testing.
-- **target** : This folder contains the results of execution
-- **resource/features** : This folder will contain features files. And each feature file contains step-by-step test scenarios.
-
+📦 Project Root  
+ ┣ 📂 src/main/java/io/cucumber/  
+ ┃ ┣ 📂 pages            # Contains Page Object classes for the application  
+ ┃ ┣ 📂 stepDefinition   # Holds step definition files mapping Gherkin steps to Java methods  
+ ┃ ┣ 📂 core            # Contains base classes and core utilities  
+ ┃ ┣ 📂 util            # Includes reusable functions across the test suite  
+ ┣ 📂 src/test/resources  
+ ┃ ┣ 📂 features        # Holds Cucumber feature files (test scenarios written in Gherkin)  
+ ┃ ┣ 📂 testdata        # Contains test data files and application properties  
+ ┣ 📂 target            # Stores execution results and reports  
 
 ## Run the tests
 
-To run all the tests use below command in terminal
+Execute the following command in the terminal to run all test cases:
 `mvn clean test`
 
-Allure reports will be created after the run and to generate report
+**##Generate Allure Reports**
+After test execution, Allure reports will be created under the allure-results folder.
+
+**#Generate Allure Report**
 `allure generate allure-results --clean -o allure-report`
 or
 `allure serve Allure-Report`
